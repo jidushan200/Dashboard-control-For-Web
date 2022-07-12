@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>仪表</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/gauge.js"></script>
+</head>
+<body style="background-color:#21304c">
+    <button style="width:100px;height:50px;" onclick="test()">触发</button>
+    <div id="test" style="width:400px;height:400px;margin:auto">
+    </div>
+    <script type="text/javascript">
+        //仪表标题
+        var title = "好看的仪表";
+        $("#test").lu_word(title);
+        function test() {
+            //目标值
+            var progress = Math.random();
+            //参数1：仪表值<=1
+            //参数2：中间显示的值<=1
+            $("#test").setWord(progress, progress);
+        }
+    </script>
+</body>
+</html>
